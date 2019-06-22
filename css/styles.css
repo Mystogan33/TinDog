@@ -62,9 +62,16 @@ p {
 }
 
 .title-img {
-  position: absolute;
+  margin-top: 50px;
   transform: rotate(25deg);
   width: 60%;
+}
+
+@media (min-width: 992px) {
+  .title-img {
+    margin-top: 0;
+    position: absolute;
+  }
 }
 
 /* Features */
