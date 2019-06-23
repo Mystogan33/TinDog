@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -50,7 +54,7 @@ p {
   margin: 5% 3% 5% 0;
 }
 
-/* Title Image */
+/* Title */
 
 .title {
   background-color: #ff4c68;
@@ -62,15 +66,22 @@ p {
 }
 
 .title-img {
-  margin-top: 50px;
+  margin-left: 20px;
+  position: absolute;
   transform: rotate(25deg);
   width: 60%;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
+  .title {
+    text-align: center;
+  }
   .title-img {
-    margin-top: 0;
-    position: absolute;
+    margin-left: 0px;
+    margin-top: 50px;
+    position: static;
+    transform: rotate(0);
+
   }
 }
 
@@ -143,4 +154,39 @@ p {
 
 .pricing-column {
   padding: 3% 2%;
+}
+
+/* Call To Action */
+
+.cta {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.cta .container-fluid {
+  padding: 7% 15%;
+}
+
+.cta-heading {
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #fff;
+}
+
+.footer .container {
+  padding: 7% 15%;
+}
+
+.footer .container i {
+  color: #000;
+  margin: 3% 2%;
+}
+
+.footer .copyright {
+  color: #8f8f8f;
 }
