@@ -82,7 +82,7 @@ p {
 }
 
 .features .container-fluid {
-  padding: 7% 15%;
+  padding: 7% 0;
 }
 
 .feature {
@@ -133,6 +133,12 @@ p {
 /* Pricing */
 .pricing {
   padding: 100px;
+}
+
+@media (max-width: 767.98px) {
+  .pricing {
+    padding: 100px 30px;
+  }
 }
 
 .pricing-column {
