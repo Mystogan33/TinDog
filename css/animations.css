@@ -1,5 +1,5 @@
 /* Animations */
-  .slide {
+  .slide-elements {
     opacity: 0;
     -moz-transition: all 500ms linear;
     -webkit-transition: all 500ms linear;
@@ -20,5 +20,3 @@
     -ms-transform: translate(0px, 0px);
     transform: translate3d(0px, 0px, 0px);
   }
-
-  
