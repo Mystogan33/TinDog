@@ -1,0 +1,271 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+.big-heading {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Container */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+.red-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.red-light-section {
+  background-color: #ef8172;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Buttons */
+
+%big-btn {
+  @extend .btn;
+  @extend .btn-lg;
+}
+
+%cta-btn {
+  @extend %big-btn;
+  @extend .btn-block;
+}
+
+.download-button {
+  @extend %big-btn;
+  margin: 5% 3% 5% 0;
+}
+
+.apple-download-button {
+  @extend .download-button;
+  @extend .btn-dark;
+}
+
+.android-download-button {
+  @extend .download-button;
+  @extend .btn-outline-light;
+}
+
+.sign-up-button {
+  @extend %cta-btn;
+  @extend .btn-outline-dark;
+}
+
+.get-started-button {
+  @extend %cta-btn;
+  @extend .btn-dark;
+}
+
+/* Icons */
+.contact-icon {
+  color: #000;
+  margin: 3% 2%;
+}
+
+/* Title */
+.title-section {
+  .container-fluid {
+    @extend .red-section;
+    @extend .text-center;
+    @extend .text-lg-left;
+    padding: 3% 15% 7%;
+
+    /* Navigation Bar */
+    .main-navbar {
+      @extend .navbar;
+      @extend .navbar-expand-lg;
+      @extend .navbar-dark;
+      padding: 0 0 4.5rem;
+
+      .main-navbar-logo {
+        @extend .navbar-brand;
+        @extend .font-weight-bold;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2.5rem;
+      }
+
+      .navbar-toggler {
+        @extend .border-0;
+      }
+
+      .main-navbar-menu {
+        @extend .navbar-collapse;
+
+        ul {
+          @extend .navbar-nav;
+          @extend .ml-auto;
+
+          li {
+            @extend .nav-item;
+            padding: 0 18px;
+
+            a {
+              @extend .nav-link;
+              font-family: "Montserrat";
+              font-size: 1.2rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+    .heading-row {
+      @extend .row;
+
+      .heading-column, .picture-column {
+        @extend .col-lg-6;
+      }
+
+      .title-img {
+        @extend .ml-sm-0;
+        @extend .ml-lg-3;
+        position: absolute;
+        transform: rotate(25deg);
+        width: 60%;
+      }
+      @media (max-width: 992px) {
+        .title-img {
+          position: static;
+          transform: rotate(0);
+        }
+      }
+
+    }
+  }
+}
+
+/* Features */
+
+.features {
+  @extend .white-section;
+  @extend .position-relative;
+
+  .feature-container {
+    @extend .container-fluid;
+    @extend .row;
+
+    .feature {
+      padding: 5%;
+      position: relative;
+      @extend .col-lg-4;
+
+      .feature-title {
+        font-size: 1.5rem;
+      }
+
+      .feature-icon {
+        color: #ef8172;
+        margin-bottom: 1rem;
+
+        &:hover {
+          color: #ff4c68;
+        }
+      }
+
+    }
+
+  }
+}
+
+/* Testimonials */
+.testimonials {
+  @extend .red-light-section;
+
+    .testimonial-text {
+      font-size: 3rem;
+      line-height: 1.5;
+    }
+
+    .testimonial-image {
+      border-radius: 100%;
+      margin: 20px;
+      width: 10%;
+    }
+}
+
+/* Press */
+.press-logo {
+  margin: 20px 20px 50px;
+  width: 15%;
+}
+
+/* Pricing */
+.pricing {
+  @extend .white-section;
+  padding: 100px;
+  @media (max-width: 992px) {
+    padding: 100px 30px;
+  }
+
+  .pricing-container {
+    @extend .container-fluid;
+    @extend .text-center;
+    @extend .row;
+    padding: 7% 0;
+
+    .pricing-column {
+      @extend .col-md-6;
+      @extend .col-lg-4;
+      padding: 3% 2%;
+
+      .price-text {
+        font-size: 3rem;
+        line-height: 1.5;
+      }
+
+    }
+
+  }
+
+}
+
+/* Call To Action */
+.cta {
+  @extend .red-section;
+
+  .cta-container {
+    @extend .container-fluid;
+    @extend .text-center;
+  }
+}
+
+/* Footer */
+.footer {
+  @extend .white-section;
+
+  .footer-container {
+    @extend .container-fluid;
+    @extend .text-center;
+  }
+
+}

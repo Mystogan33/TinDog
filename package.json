@@ -1,0 +1,24 @@
+{
+  "name": "tindog",
+  "version": "1.0.0",
+  "description": "A mockup of the Tinder application but for Dogs!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "node-sass -w scss/ -o css/",
+    "sass": "node-sass scss/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mystogan33/TinDog.git"
+  },
+  "author": "Mystogan33 (Valentin GAY)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mystogan33/TinDog/issues"
+  },
+  "homepage": "https://github.com/Mystogan33/TinDog#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
