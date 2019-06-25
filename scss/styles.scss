@@ -172,24 +172,28 @@ p {
 
   .feature-container {
     @extend .container-fluid;
-    @extend .row;
 
-    .feature {
-      padding: 5%;
-      position: relative;
-      @extend .col-lg-4;
+    .feature-row {
+      @extend .row;
 
-      .feature-title {
-        font-size: 1.5rem;
-      }
+      .feature {
+        padding: 5%;
+        position: relative;
+        @extend .col-lg-4;
 
-      .feature-icon {
-        color: #ef8172;
-        margin-bottom: 1rem;
-
-        &:hover {
-          color: #ff4c68;
+        .feature-title {
+          font-size: 1.5rem;
         }
+
+        .feature-icon {
+          color: #ef8172;
+          margin-bottom: 1rem;
+
+          &:hover {
+            color: #ff4c68;
+          }
+        }
+
       }
 
     }
@@ -230,23 +234,24 @@ p {
   .pricing-container {
     @extend .container-fluid;
     @extend .text-center;
-    @extend .row;
-    padding: 7% 0;
 
-    .pricing-column {
-      @extend .col-md-6;
-      @extend .col-lg-4;
-      padding: 3% 2%;
+    .pricing-row {
+      @extend .row;
+      padding: 7% 0;
 
-      .price-text {
-        font-size: 3rem;
-        line-height: 1.5;
+      .pricing-column {
+        @extend .col-md-6;
+        @extend .col-lg-4;
+        padding: 3% 2%;
+
+        .price-text {
+          font-size: 3rem;
+          line-height: 1.5;
+        }
       }
-
     }
 
   }
-
 }
 
 /* Call To Action */
