@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 body {
@@ -18,11 +18,17 @@ p {
 /* Headings */
 
 .big-heading {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .big-heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
   .big-heading {
     font-size: 3rem;
   }
@@ -99,8 +105,8 @@ p {
     transform: rotate(0);
   }
 }
-/* Features */
 
+/* Features */
 .feature {
   padding: 5%;
   position: relative;
@@ -162,6 +168,7 @@ p {
 
 .pricing-column {
   padding: 3% 2%;
+  overflow: hidden;
 }
 
 /* Call To Action */
