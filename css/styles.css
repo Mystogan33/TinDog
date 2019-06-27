@@ -21,6 +21,12 @@ p {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .big-heading {
+    font-size: 3rem;
+  }
+}
+
 .section-heading {
   font-size: 3rem;
   line-height: 1.5;
@@ -92,7 +98,6 @@ p {
     transform: rotate(0);
   }
 }
-
 /* Features */
 
 .feature {
