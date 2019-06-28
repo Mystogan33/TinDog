@@ -7021,14 +7021,13 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 html {
-  scroll-behavior: smooth;
-  /*overflow-x: hidden;*/ }
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Montserrat", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900; }
+  font-weight: bold; }
 
 p {
   color: #8f8f8f; }
@@ -7117,8 +7116,12 @@ p {
 
 /* Testimonials */
 .testimonial-text {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.5; }
+
+@media (min-width: 768px) {
+  .testimonial-text {
+    font-size: 3rem; } }
 
 .testimonial-image {
   border-radius: 100%;
