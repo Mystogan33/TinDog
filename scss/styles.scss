@@ -273,21 +273,23 @@ p {
   overflow-x: hidden;
 }
 
-.left-slide {
+@mixin slide-left {
   -moz-transform: translate3d(-100px, 0px, 0px);
   -webkit-transform: translate3d(-100px, 0px, 0px);
   -o-transform: translate(-100px, 0px);
   -ms-transform: translate(-100px, 0px);
   transform: translate3d(-100px, 0px, 0px);
 }
-.right-slide {
+
+@mixin slide-right {
   -moz-transform: translate3d(100px, 0px, 0px);
   -webkit-transform: translate3d(100px, 0px, 0px);
   -o-transform: translate(100px, 0px);
   -ms-transform: translate(100px, 0px);
   transform: translate3d(100px, 0px, 0px);
 }
-.bottom-slide {
+
+@mixin slide-bottom {
   -moz-transform: translate3d(0px, 100px, 0px);
   -webkit-transform: translate3d(0px, 100px, 0px);
   -o-transform: translate(0px, 100px);
@@ -295,7 +297,7 @@ p {
   transform: translate3d(0px, 100px, 0px);
 }
 
-.in-view {
+@mixin view-in {
   opacity: 1;
   -moz-transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -304,102 +306,65 @@ p {
   transform: translate3d(0px, 0px, 0px);
 }
 
+.left-slide {
+  @include slide-left;
+}
+.right-slide {
+  @include slide-right;
+}
+.bottom-slide {
+  @include slide-bottom;
+}
+
+.in-view {
+  @include view-in;
+}
+
 @media (max-width: 767.98px) {
   .sm-left-slide {
-    -moz-transform: translate3d(-100px, 0px, 0px);
-    -webkit-transform: translate3d(-100px, 0px, 0px);
-    -o-transform: translate(-100px, 0px);
-    -ms-transform: translate(-100px, 0px);
-    transform: translate3d(-100px, 0px, 0px);
+    @include slide-left;
   }
   .sm-right-slide {
-    -moz-transform: translate3d(100px, 0px, 0px);
-    -webkit-transform: translate3d(100px, 0px, 0px);
-    -o-transform: translate(100px, 0px);
-    -ms-transform: translate(100px, 0px);
-    transform: translate3d(100px, 0px, 0px);
+    @include slide-right;
   }
   .sm-bottom-slide {
-    -moz-transform: translate3d(0px, 100px, 0px);
-    -webkit-transform: translate3d(0px, 100px, 0px);
-    -o-transform: translate(0px, 100px);
-    -ms-transform: translate(0px, 100px);
-    transform: translate3d(0px, 100px, 0px);
+    @include slide-bottom;
   }
 
   .in-view {
-    opacity: 1;
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
+    @include view-in;
   }
 }
 
 @media (min-width: 768px) {
   .md-left-slide {
-    -moz-transform: translate3d(-100px, 0px, 0px);
-    -webkit-transform: translate3d(-100px, 0px, 0px);
-    -o-transform: translate(-100px, 0px);
-    -ms-transform: translate(-100px, 0px);
-    transform: translate3d(-100px, 0px, 0px);
+    @include slide-left;
   }
   .md-right-slide {
-    -moz-transform: translate3d(100px, 0px, 0px);
-    -webkit-transform: translate3d(100px, 0px, 0px);
-    -o-transform: translate(100px, 0px);
-    -ms-transform: translate(100px, 0px);
-    transform: translate3d(100px, 0px, 0px);
+    @include slide-right;
   }
   .md-bottom-slide {
-    -moz-transform: translate3d(0px, 100px, 0px);
-    -webkit-transform: translate3d(0px, 100px, 0px);
-    -o-transform: translate(0px, 100px);
-    -ms-transform: translate(0px, 100px);
-    transform: translate3d(0px, 100px, 0px);
+    @include slide-bottom;
   }
 
   .in-view {
-    opacity: 1;
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
+    @include view-in;
   }
 }
 
 @media (min-width: 992px) {
   .lg-left-slide {
-    -moz-transform: translate3d(-100px, 0px, 0px);
-    -webkit-transform: translate3d(-100px, 0px, 0px);
-    -o-transform: translate(-100px, 0px);
-    -ms-transform: translate(-100px, 0px);
-    transform: translate3d(-100px, 0px, 0px);
+    @include slide-left;
   }
   .lg-right-slide {
-    -moz-transform: translate3d(100px, 0px, 0px);
-    -webkit-transform: translate3d(100px, 0px, 0px);
-    -o-transform: translate(100px, 0px);
-    -ms-transform: translate(100px, 0px);
-    transform: translate3d(100px, 0px, 0px);
+    @include slide-right;
   }
 
   .lg-bottom-slide {
-    -moz-transform: translate3d(0px, 100px, 0px);
-    -webkit-transform: translate3d(0px, 100px, 0px);
-    -o-transform: translate(0px, 100px);
-    -ms-transform: translate(0px, 100px);
-    transform: translate3d(0px, 100px, 0px);
+    @include slide-bottom;
   }
 
   .in-view {
-    opacity: 1;
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
+    @include view-in;
   }
 }
