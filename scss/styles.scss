@@ -1,4 +1,20 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+ /* @import "node_modules/bootstrap/scss/bootstrap"; */
+
+ // Required
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "node_modules/bootstrap/scss/utilities";
+
+// Optional
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/carousel";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/transitions";
 
 html {
   scroll-behavior: smooth;
