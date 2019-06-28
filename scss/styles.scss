@@ -42,7 +42,13 @@ p {
 
 /* Container */
 
-.container-fluid {
+.title-container,
+.features-container,
+.testimonial-container,
+.pricing-container,
+.cta-container,
+.footer-container {
+  @include make-container();
   padding: 7% 15%;
 }
 
@@ -171,6 +177,11 @@ p {
   @include red-light-section;
 }
 
+.testimonial-container {
+  padding: 7% 15%;
+  margin-right: -100%;
+}
+
 .testimonial-text {
   font-size: 2rem;
   line-height: 1.5;
@@ -208,10 +219,10 @@ p {
     padding: 100px 30px;
   }
 
-  .container-fluid {
-    padding: 7% 0;
-  }
+}
 
+.pricing-container {
+  padding: 7% 0;
 }
 
 .pricing-row {

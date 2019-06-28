@@ -7089,7 +7089,17 @@ p {
   line-height: 1.5; }
 
 /* Container */
-.container-fluid {
+.title-container,
+.features-container,
+.testimonial-container,
+.pricing-container,
+.cta-container,
+.footer-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 7% 15%; }
 
 /* Buttons */
@@ -7186,6 +7196,10 @@ p {
   background-color: #ef8172;
   color: #fff; }
 
+.testimonial-container {
+  padding: 7% 15%;
+  margin-right: -100%; }
+
 .testimonial-text {
   font-size: 2rem;
   line-height: 1.5; }
@@ -7215,8 +7229,9 @@ p {
   @media (max-width: 992px) {
     .pricing {
       padding: 100px 30px; } }
-  .pricing .container-fluid {
-    padding: 7% 0; }
+
+.pricing-container {
+  padding: 7% 0; }
 
 .pricing-row {
   display: flex;
