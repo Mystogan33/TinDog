@@ -55,17 +55,17 @@ p {
 
 /* Sections */
 
-.red-section {
+@mixin red-section {
   background-color: #ff4c68;
   color: #fff;
 }
 
-.red-light-section {
+@mixin red-light-section {
   background-color: #ef8172;
   color: #fff;
 }
 
-.white-section {
+@mixin white-section {
   background-color: #fff;
 }
 
@@ -92,43 +92,57 @@ p {
 
 /* Title */
 
-.title .container-fluid {
-  padding: 3% 15% 7%;
-}
+.title {
+  @include red-section;
 
-.title-img {
-  position: absolute;
-  transform: rotate(25deg);
-  width: 60%;
-}
-
-@media (max-width: 992px) {
-  .title-img {
-    position: static;
-    transform: rotate(0);
+  .container-fluid {
+    padding: 3% 15% 7%;
   }
+
+  .title-img {
+    position: absolute;
+    transform: rotate(25deg);
+    width: 60%;
+  }
+
+  @media (max-width: 992px) {
+    .title-img {
+      position: static;
+      transform: rotate(0);
+    }
+  }
+
 }
 
 /* Features */
-.feature {
-  padding: 5%;
+.features {
+  @include white-section;
   position: relative;
-}
 
-.feature-title {
-  font-size: 1.5rem;
-}
+  .feature {
+    padding: 5%;
+    position: relative;
+  }
 
-.feature-icon {
-  color: #ef8172;
-  margin-bottom: 1rem;
-}
+  .feature-title {
+    font-size: 1.5rem;
+  }
 
-.feature-icon:hover {
-  color: #ff4c68;
+  .feature-icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+  }
+
+  .feature-icon:hover {
+    color: #ff4c68;
+  }
 }
 
 /* Testimonials */
+.testimonials {
+  @include red-light-section;
+}
+
 .testimonial-text {
   font-size: 2rem;
   line-height: 1.5;
@@ -147,15 +161,19 @@ p {
 }
 
 /* Press */
+.press {
+  @include red-light-section;
 
-.press-logo {
-  margin: 20px 20px 50px;
-  width: 15%;
+  .press-logo {
+    margin: 20px 20px 50px;
+    width: 15%;
+  }
 }
 
 /* Pricing */
 
 .pricing {
+  @include white-section;
   padding: 100px;
 }
 
@@ -181,11 +199,20 @@ p {
 
 /* Call To Action */
 
+.cta {
+  @include red-section;
+}
+
 /* Footer */
 
-.contact-icon {
-  color: #000;
-  margin: 3% 2%;
+.footer {
+  @include white-section;
+
+  .contact-icon {
+    color: #000;
+    margin: 3% 2%;
+  }
+
 }
 
 /* ANIMATIONS */
